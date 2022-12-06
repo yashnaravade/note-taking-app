@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Button, Stack, Row, Col, FormGroup } from "react-bootstrap";
+import CreatableSelect from "react-select/creatable";
 
 function NoteForm() {
   return (
@@ -16,7 +17,7 @@ function NoteForm() {
           <Col>
             <FormGroup controlId="tags">
               <Form.Label>Tags</Form.Label>
-              <Form.Control type="text" placeholder="Enter tags" required />
+                < CreatableSelect isMulti />
             </FormGroup>
           </Col>
         </Row>
