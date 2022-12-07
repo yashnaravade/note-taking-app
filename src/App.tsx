@@ -3,9 +3,29 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom";
 import NewNote from "./components/NewNote";
 
+export type Note = {
+  id: string;
+} & NoteData;
+
+export type NoteData = {
+  title: string;
+  markdown: string;
+  tags: Tag[];
+};
+
+export type Tag = {
+  id: string;
+  label: string;
+};
+
 function App() {
+  
+  const handleSubmit = (data: NoteData) => {
+    console.log(data);
+  };
+
   return (
-    <div className="container">
+    <div className="container my-4">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<h1>Hello world!</h1>} />
