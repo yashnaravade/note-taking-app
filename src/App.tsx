@@ -3,9 +3,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom";
 import NewNote from "./components/NewNote";
 
+export type RawNote = {
+  id: string;
+};
+
+
 export type Note = {
   id: string;
 } & NoteData;
+
+export type RawNoteData = {
+  title: string;
+  markdown: string;
+  tagIds: string[];
+};
+
 
 export type NoteData = {
   title: string;
@@ -19,10 +31,9 @@ export type Tag = {
 };
 
 function App() {
-  
-  const handleSubmit = (data: NoteData) => {
-    console.log(data);
-  };
+
+  const [notes, setNotes] = useLocalStorage<RawNote[]>("NOTES", []);
+  const [tags, setTags] = useLocalStorage<Tag[]>("TAGS", []);
 
   return (
     <div className="container my-4">
