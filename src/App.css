@@ -1,0 +1,52 @@
+/* dark theme and light theme */
+
+.light-theme body {
+  color: #000;
+}
+
+.dark-theme body {
+  color: #fff;
+  background-color: #3f3f3f;
+}
+
+.dark-theme button {
+  background-color: #3f3f3f;
+  color: #fff;
+}
+
+.dark-theme .card {
+  background-color: rgb(45, 42, 42);
+  color: #fff;
+}
+
+.dark-theme react-select__control {
+  background-color: #3f3f3f;
+  color: #fff;
+}
+
+/* 
+.dark-theme .dropdown-menu {
+  background-color: #3f3f3f;
+  color: #fff;
+}
+
+.dark-theme .dropdown-item {
+  color: #fff;
+}
+
+.dark-theme .dropdown-item:hover {
+  background-color: #3f3f3f;
+  color: #fff;
+}
+
+.dark-theme .dropdown-item:focus {
+  background-color: #3f3f3f;
+  color: #fff;
+}
+
+.dark-theme .dropdown-item:active {
+  background-color: #3f3f3f;
+  color: #fff;
+}
+
+ */

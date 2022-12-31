@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useMemo } from "react"
-import { Container } from "react-bootstrap"
+import { Col, Container, Row, Stack } from "react-bootstrap"
 import { Routes, Route, Navigate } from "react-router-dom"
 import { NewNote } from "./NewNote"
 import { useLocalStorage } from "./useLocalStorage"
@@ -9,6 +9,9 @@ import { NoteList } from "./NoteList"
 import { NoteLayout } from "./NoteLayout"
 import { Note } from "./Note"
 import { EditNote } from "./EditNote"
+import ReactSwitch from "react-switch"
+import styles from "./NoteList.module.css"
+
 
 export type Note = {
   id: string
@@ -94,7 +97,7 @@ function App() {
     })
   }
 
-  return (
+  return (<>
     <Container className="my-4">
       <Routes>
         <Route
@@ -134,6 +137,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Container>
+    </>
   )
 }
 
