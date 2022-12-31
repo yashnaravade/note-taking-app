@@ -1,5 +1,5 @@
 import React from "react";
-import { NoteForm } from "./NoteForm";
+import NoteForm  from "./NoteForm";
 import { NoteData } from "../App";
 
 type NewNoteProps = {
